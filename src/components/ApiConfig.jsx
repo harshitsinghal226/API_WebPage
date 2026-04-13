@@ -7,12 +7,12 @@ export default function ApiConfig({ onConnect, loading, connStatus, defaultKey }
   const [key,  setKey]  = useState(defaultKey || '')
   const [show, setShow] = useState(false)
 
-  // The actual request goes through the Vite proxy at /api/integration
-  // But we display the real backend URL so the professor can see it clearly
-  const PROXY_PATH    = '/api/integration'
-  const DISPLAY_URL   = 'http://localhost:5000/api/integration'
+  // Locally: use Vite proxy (/api/integration → localhost:5000)
+  // On Vercel: use the full deployed Render URL directly
+  const REQUEST_URL = import.meta.env.VITE_API_BASE_URL || '/api/integration'
+  const DISPLAY_URL = import.meta.env.VITE_API_BASE_URL || 'http://localhost:5000/api/integration'
 
-  const handleConnect = () => onConnect(key, PROXY_PATH)
+  const handleConnect = () => onConnect(key, REQUEST_URL)
   const handleKeyDown = (e) => { if (e.key === 'Enter') handleConnect() }
 
   return (
