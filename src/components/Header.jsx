@@ -5,7 +5,7 @@ export default function Header() {
       <div className="container header-inner">
         <a className="logo" href="/">
           <span className="logo-icon">⚡</span>
-          <span>JobPortal <span className="logo-api">API</span></span>
+          <span>CareerConnect <span className="logo-api">API</span></span>
         </a>
         <div className="header-badges">
           <span className="badge badge-live">

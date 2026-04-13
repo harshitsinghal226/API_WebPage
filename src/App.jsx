@@ -105,7 +105,7 @@ export default function App() {
 
       <footer className="footer">
         <div className="container footer-inner">
-          <p>🎓 B.Tech Project — Job Portal Integration API &nbsp;|&nbsp; Built with ❤️ by <strong>Harshit Singhal</strong></p>
+          <p>🎓 B.Tech Project — CareerConnect Integration API &nbsp;|&nbsp; Built with ❤️ by <strong>Harshit Singhal</strong></p>
           <p className="footer-note">
             This demo page showcases API-based job management using HTTP requests with <code style={{ color: '#a5b4fc', fontFamily: 'JetBrains Mono, monospace' }}>x-api-key</code> authentication.
           </p>

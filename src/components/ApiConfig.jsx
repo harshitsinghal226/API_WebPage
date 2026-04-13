@@ -21,7 +21,7 @@ export default function ApiConfig({ onConnect, loading, connStatus, defaultKey }
         <span className="card-icon">🔑</span>
         <div>
           <h2 className="card-title">API Configuration</h2>
-          <p className="card-desc">Enter your company's API key to authenticate requests</p>
+          <p className="card-desc">Enter your company's API key to connect with CareerConnect</p>
         </div>
       </div>
 

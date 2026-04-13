@@ -5,10 +5,10 @@ export default function Hero({ jobCount }) {
       <div className="container">
         <span className="hero-eyebrow">🎓 Professor Demo · B.Tech Project</span>
         <h1 className="hero-title">
-          Job Portal <span className="gradient-text">Integration API</span>
+          CareerConnect <span className="gradient-text">Integration API</span>
         </h1>
         <p className="hero-subtitle">
-          A secure RESTful API that lets any company integrate with our job portal —
+          A secure RESTful API that lets any company integrate with CareerConnect —
           post new jobs or remove them in real time using a unique API key.
         </p>
         <div className="hero-stats">
