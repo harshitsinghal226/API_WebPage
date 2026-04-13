@@ -1,12 +1,16 @@
 import { useState, useCallback, useRef } from 'react'
 
 // ─── Config ────────────────────────────────────────────────────────────────
-// Set DEMO_MODE = true  → fake in-memory data (no backend needed for presentation)
-// Set DEMO_MODE = false → real HTTP requests to your Express + MongoDB backend
-const DEMO_MODE        = false
+// Controlled by environment variables (see .env and .env.local)
+//
+//  Local dev  → .env.local sets VITE_DEMO_MODE=false  (real MongoDB)
+//  Vercel     → .env sets    VITE_DEMO_MODE=true   (demo mode, no backend needed)
+//
+const DEMO_MODE = import.meta.env.VITE_DEMO_MODE !== 'false'  // true unless explicitly 'false'
 
-// Use a relative URL so Vite proxies it to http://localhost:5000 — no CORS issues!
-const BASE_INTEGRATION = '/api/integration'
+// Local dev uses /api/integration (Vite proxy → localhost:5000)
+// Vercel / deployed: use the full deployed backend URL from env var
+const BASE_INTEGRATION = import.meta.env.VITE_API_BASE_URL || '/api/integration'
 const REAL_API_KEY     = 'jp-integration-key-2026-secure'
 
 // ─── Demo seed data ────────────────────────────────────────────────────────
